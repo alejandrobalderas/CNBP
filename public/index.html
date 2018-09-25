@@ -606,5 +606,27 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
+ 	<script>
+
+		debugger;
+
+		const ws = new WebSocket('ws://' + window.location.host );
+
+		ws.addEventListener('open', function(){
+			console.log('Connection establised!');
+		});
+
+		ws.addEventListener('message', function(e){
+			console.log(e, e.data);
+		})
+
+		ws.addEventListener('error', function(err){
+
+				console.log('There was an error!', err);
+
+		});
+
+	</script>
+
 	</body>
 </html>
