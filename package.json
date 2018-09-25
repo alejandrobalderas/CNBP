@@ -1,0 +1,23 @@
+{
+  "name": "cnbp",
+  "version": "1.0.0",
+  "description": "Webpage test for a project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrobalderas/CNBP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrobalderas/CNBP/issues"
+  },
+  "homepage": "https://github.com/alejandrobalderas/CNBP#readme",
+  "dependencies": {
+    "node-static": "^0.7.11"
+  }
+}
