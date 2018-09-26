@@ -3,7 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Chatbot</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="css/icomoon.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <!-- Owl Carousel  -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="css/flexslider.css">
+
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Modernizr JS -->
+    <script src="js/modernizr-2.6.2.min.js"></script>
+
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" type="text/css" href="css/chatbot.css">
+
 
     <script type="text/javascript">
       $(document).ready(function(){
@@ -18,9 +45,55 @@
 
 
   <body>
+    <nav class="fh5co-nav" role="navigation">
+      <div class="top-menu">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-2">
+    <!--					<div id="fh5co-logo"><a href="index.html">CNBP<span>.</span></a></div>	 -->
+            <div id="fh5co-logo"><img src="images/logo.jpg"  width=120px height=30px></div>
+            </div>
+            <div class="col-xs-10 text-right menu-1">
+              <ul>
+                <li class="has-dropdown">
+                  <a href="index.html">Home</a>
+                  <ul class="dropdown">
+                    <li><a href="welcome.html">Welcome</a></li>
+                    <li><a href="missionStatement.html">Our Mission</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown">
+                  <a href="index.html">CNBP</a>
+                  <ul class="dropdown">
+                    <li><a href="history.html">Our History</a></li>
+                    <li><a href="locations.html">Our Locations</a></li>
+                    <li><a href="financials.html">Financials</a></li>
+                  </ul>
+                </li>
+                <li><a href="productLine.html">Product Line</a></li>
+                <li><a href="industrynews.html">Industry News</a></li>
+                <li class="has-dropdown">
+                  <a href="careers.html">Careers</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Leeds</a></li>
+                    <li><a href="#">Glasgow</a></li>
+                    <li><a href="https://able.co.uk/training/" target="_blank">Online Training</a></li>
+                  </ul>
+                </li>
+                <li><a href="chatBot.html">Chatbot</a></li>
+                <li class="btn-cta"><a href="signUpLogin.html"><span>Login</span></a></li>
+                <li class="btn-cta"><a href="signUpLogin.html"><span>Sign Up</span></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+
     <div class="chatbox">
       <div class="chatlogs" id="chatlogs">
-
       </div>
 
       <form class="chat-form">
@@ -83,6 +156,11 @@
         function addMessages(){
           document.getElementById('chatlogs').innerHTML += '<div class="chat self"> <div class="user-photo"><img src="images/user-1.jpg"> </div><p class = "chat-message">'+ myMessage +'</p></div>';
           document.getElementById('chatlogs').innerHTML += '<div class="chat friend"> <div class="user-photo"><img src="images/user-1.jpg"> </div><p class = "chat-message">'+ botmessage +'</p></div>';
+          document.getElementById('chatbox').value = "";
+
+          var objDiv = document.getElementById("chatlogs");
+          objDiv.scrollTop = objDiv.scrollHeight;
+
         }
         /*function myfunction(){
           var chatmessage = document.getElementById("chatbox").value;
