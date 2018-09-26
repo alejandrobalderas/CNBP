@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/alejandrobalderas/CNBP#readme",
   "dependencies": {
+    "dotenv": "^6.0.0",
     "node-static": "^0.7.11",
+    "watson-developer-cloud": "^3.11.0",
     "ws": "^6.0.0"
   }
 }

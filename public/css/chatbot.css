@@ -121,3 +121,7 @@ body {
 .chat-form button:hover{
   background: #13c8d9;
 }
+
+.chatbox .chat.self:nth-child(1) {
+    display: none;
+}
