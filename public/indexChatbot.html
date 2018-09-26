@@ -3,36 +3,8 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>CNBP &mdash; Oil Products</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
+	<title>Chatbot &mdash; Awsome Chatbot</title>
 
-	<!--
-	//////////////////////////////////////////////////////
-
-	FREE HTML5 TEMPLATE
-	DESIGNED & DEVELOPED by FreeHTML5.co
-
-	Website: 		http://freehtml5.co/
-	Email: 			info@freehtml5.co
-	Twitter: 		http://twitter.com/fh5co
-	Facebook: 		https://www.facebook.com/fh5co
-
-	//////////////////////////////////////////////////////
-	 -->
-
-  	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content=""/>
-	<meta property="og:image" content=""/>
-	<meta property="og:url" content=""/>
-	<meta property="og:site_name" content=""/>
-	<meta property="og:description" content=""/>
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
 
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
 
@@ -55,6 +27,8 @@
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
 
+	<link rel="stylesheet" href="/css/chatbot.css">
+
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	<!-- FOR IE9 below -->
@@ -62,48 +36,8 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
-
-
-
-
-	<script type="text/javascript">
-	window.onload = function () {
-
-	var chart = new CanvasJS.Chart("chartContainer", {
-		theme: "light1", // "light2", "dark1", "dark2"
-		animationEnabled: true, // change to true
-		title:{
-			text: "Basic Column Chart"
-		},
-		data: [
-		{
-			// Change type to "bar", "area", "spline", "pie",etc.
-			type: "column",
-			dataPoints: [
-				{ label: "apple",  y: 10  },
-				{ label: "orange", y: 15  },
-				{ label: "banana", y: 25  },
-				{ label: "mango",  y: 30  },
-				{ label: "grape",  y: 28  }
-			]
-		}
-		]
-	});
-	chart.render();
-
-	}
-	</script>
-
-
-
-
-
 	</head>
 	<body>
-
-
-
-
 
 	<div class="fh5co-loader"></div>
 
@@ -132,16 +66,10 @@
 									<li><a href="financials.html">Financials</a></li>
 								</ul>
 							</li>
-							<li class="has-dropdown">
-								<a href="blog.html">Product Line</a>
-								<ul class="dropdown">
-									<li><a href="standard.html">Standard</a></li>
-									<li><a href="customized.html">Cutomized</a></li>
-								</ul>
-							</li>
+							<li><a href="productLine.html">Product Line</a></li>
 							<li><a href="industrynews.html">Industry News</a></li>
 							<li class="has-dropdown">
-								<a href="contact.html">Careers</a>
+								<a href="careers.html">Careers</a>
 								<ul class="dropdown">
 									<li><a href="#">Leeds</a></li>
 									<li><a href="#">Glasgow</a></li>
@@ -158,8 +86,35 @@
 		</div>
 	</nav>
 
-	<div id="chartContainer" style="height: 370px; width: 100%;"></div>
-	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+			<div class="chatbox">
+				<div class="chatlogs">
+					<div class="chat friend">
+						<div class="user-photo"><img src="images/user-1.jpg"> </div>
+						<p class = "chat-message"> whats up</p>
+					</div>
+					<div class="chat self">
+						<div class="user-photo"><img src="images/user-2.jpg">  </div>
+						<p class = "chat-message"> hey</p>
+					</div>
+					<div class="chat friend">
+						<div class="user-photo"> </div>
+						<p class = "chat-message"> Had denoting properly jointure you occasion directly raillery. In said to of poor full be post face snug. Introduced imprudence see say unpleasing devonshire acceptance son. Exeter longer wisdom gay nor design age. Am weather to entered norland no in showing service. Nor repeated speaking shy appetite. Excited it hastily an pasture it observe. Snug hand how dare here too.
+
+	Attention he extremity unwilling on otherwise. Conviction up partiality as delightful is discovered. Yet jennings resolved disposed exertion you off. Left did fond drew fat head poor. So if he into shot half many long. China fully him every fat was world grave. </p>
+					</div>
+					<div class="chat self">
+						<div class="user-photo"> </div>
+						<p class = "chat-message"> hey</p>
+					</div>
+				</div>
+
+				<div class="chat-form">
+					<textarea></textarea>
+					<button>Send</button>
+				</div>
+			</div>
+
+
 
 	<footer id="fh5co-footer" role="contentinfo">
 		<div class="container">
@@ -242,6 +197,27 @@
 	<script src="js/magnific-popup-options.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+ 	<script>
+
+
+		const ws = new WebSocket('ws://' + window.location.host );
+
+		ws.addEventListener('open', function(){
+			console.log('Connection establised!');
+		});
+
+		ws.addEventListener('message', function(e){
+			console.log(e, e.data);
+		})
+
+		ws.addEventListener('error', function(err){
+
+				console.log('There was an error!', err);
+
+		});
+
+	</script>
 
 	</body>
 </html>
